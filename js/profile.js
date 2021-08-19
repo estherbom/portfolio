@@ -43,10 +43,11 @@ nav.find('a').click(function(){
 	});
     
      $('.modal').magnificPopup({type:'image',gallery:{enabled:true}
-        }).each(function(){
-         $(this).appedn('<div class="title">'+
-        $(this).attr('title')+'</div>');
-     });
+        });
+     // .each(function(){
+     //     $(this).appedn('<div class="title">'+
+     //    $(this).attr('title')+'</div>');
+     // });
 })
 
     
