@@ -150,6 +150,7 @@ body{
 
 .container img {
     width: 306px;
+    object-fit: cover;
 }
 
 .about__title {
