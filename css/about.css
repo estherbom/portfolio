@@ -9,6 +9,7 @@ br {clear: both;}
 #header{
  overflow:hidden;
 }
+
 .header_nav{
 	height:100%;
 	width:70px;
@@ -139,168 +140,90 @@ display:none;
 body{
 	width:100%;
 	height:100%;
-    overflow:hidden;
-    position:absolute;
+    overflow: hidden;
+    background: #f6f6f6;
 }
 
-
-.wrapper{
-    display:flex;
-    flex-direction:row;
-    width:2200px;
-    transform: rotate(90deg)translateY(-100vh);
-    transform-origin: top left;
-} 
-
-#outer-wrapper{
-   width:100vh;
-    height: 100vw;
-    transform: rotate(-90deg) translateX(-100vh);
-    transform-origin: top left;
-    overflow-y:scroll;
-    overflow-x:hidden;
-    position:relative;
-    scrollbar-width:none;
-    -ms-overlofw-style:none;
+.container {
+    margin: 60px 0 0 140px; 
 }
 
-::-webkit-scrollbar{
-    display:none;
+.container img {
+    width: 306px;
 }
 
-
-
-
-/*overview*/
-
-#overview{
-    width:1200px;
-    height:100vh;
-    position:relative;
-    padding-top:60px;
-    background:#f6f6f6;
-    overflow:hidden;
-}
-
-#overview> h1{
-   font-family:Vidaloka;
-    font-size:40px;
-    font-style: normal;
-    font-weight: normal;
+.about__title {
+    font-family: Vidaloka;
+    font-size: 40px;
     line-height: 50px;
-    margin-left:140px;  
 }
 
-.intro {
-    position:relative;
-    margin-left:140px;
-    margin-top:40px;
-    display:inline-block
+.about__body {
+    display: flex;
+    margin-top: 40px;
 }
 
-.intro img{
-    width:306px;
-    height:auto; 
+.about__body__text {
+    font-family: Vidaloka;
+    font-size: 20px;
+    padding: 1em 3em;
 }
 
-.intro p{
-    font:34px Vidaloka, serif;
-    line-height:45px;
-    display:inline;
-    position:absolute;
-    width:500px;
-    margin-left:50px;
-}
-
-.intro button{
-    position: absolute;
+button {
     width: 150px;
     height: 54px;
     background: #FE6242;
-    border-radius:4px;
-    display:inline;
-    bottom:20px;
-    margin-left:50px;
-    text-align:center;
-    border:none;
+    border-radius: 4px;
+    display: inline;
+    bottom: 20px;
+    text-align: center;
+    border: none;
 }
 
-.intro a{
-    text-decoration:none;
+a {
+    text-decoration: none;
     font-family: PT Sans;
     font-weight: bold;
     font-size: 25px;
-    color:white;
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .about__body__text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about__body__text {
+        font-size: 15px;
+    }
 }
 
 
-#intro{
-    width:1300px;
-    height:100vh;
-    position:relative;
-    padding-top:100px;
-    background:#f6f6f6;
-    overflow:hidden;
-}
-
-.intro2{
-    position:relative;
-    top:40px;
-    font-family: PT Sans;
-    font-size: 20px;
-    line-height: 26px;
-}
-
-.left{
-    width:680px;
-    left:120px;
-    position:absolute;
-}
-
-.right2{
-    position:absolute;
-    width:850px;
-    top:205px;
-    left:120px;
-}
-
-.right3{
-    position:absolute;
-    width:850px;
-    top:350px;
-    left:120px;
-}
-
-.inbox{
-    position:absolute;
-    font-weight:bold;
-    left:850px;
-    font-family: PT sans;
-}
-
-.inbox p{
-    margin-top:150px;
-    margin-left:30px;
-}
-
-.inbox p a{
-  color:#FE6242;
-  text-decoration:none;
-  top:60px;
-}
-
-.inbox img{
-    width:120px;
-    position:absolute;
-    opacity: 0.7;
-}
-
-@media screen and (max-height:670px){
+@media screen and (max-width:610px){
     .nav li a{font-size:110px;}
-}
+    body {
+        overflow: auto;
+    }
+    
+    .container {
+        margin: 0;
+    }
 
-@media screen and (min-height:740px){
-   #overview, #intro{padding-top:90px;
+    .container img {
+        width: auto;
+    }
+
+    .about__title {
+        font-size: 30px;
+        line-height: normal;
+    }
+    .about__body {
+        flex-direction: column;
+    }
+
+
 }
 
 @media screen and (max-width:1024px){
@@ -310,16 +233,6 @@ body{
 .nav li a{
     font-size:100px;}
 }
-
-@media screen and (max-width:1024px){
-.nav li{
-    margin-left:40px;}
-
-.nav li a{
-    font-size:100px;}
-}
-
-
 
 @media screen and (max-width:800px){
 .nav li a{
@@ -329,10 +242,6 @@ body{
 
 
 @media screen and (max-width:610px){
-#wrapper{
-    padding:100px 30px 0 0;
-    top:0;
-}
 .header_nav{
 	height:70px;
 	width:100%;}
@@ -369,8 +278,6 @@ header button{
     text-align:left;  
     margin-left: 40px;}
     
-#overview{padding-top:100px;
-margin-left:-80px;}
 }
 
 
